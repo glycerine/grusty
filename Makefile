@@ -1,5 +1,6 @@
 all:
 	cd the_rust_part && cargo build --release
+	go test -v
 
 clean:
 	rm -rf the_rust_part/target
