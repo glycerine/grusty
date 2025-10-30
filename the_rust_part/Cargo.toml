@@ -1,0 +1,10 @@
+[package]
+name = "the_rust_part"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "the_rust_part"
+crate-type = ["staticlib"] # This tells Cargo to create a static library
+
+[dependencies]
