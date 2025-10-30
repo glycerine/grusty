@@ -2,4 +2,5 @@ all:
 	cd the_rust_part && cargo build --release
 
 clean:
-	cd the_rust_part && rm -rf target
+	rm -rf the_rust_part/target
+	rm -f c_example/call_rust_from_c_test
