@@ -1,12 +1,9 @@
 package grusty
 
 /*
-#cgo linux LDFLAGS: -L${SRCDIR}/the_rust_part/target/release
-#cgo linux CFLAGS: -I${SRCDIR}/the_rust_part/src
-#cgo darwin LDFLAGS: -L${SRCDIR}/the_rust_part/target/release
-#cgo darwin CFLAGS: -I${SRCDIR}/the_rust_part/src
-#cgo windows LDFLAGS: -L${SRCDIR}/the_rust_part/target/release
-#cgo windows CFLAGS: -I${SRCDIR}/the_rust_part/src
+#cgo LDFLAGS: -L${SRCDIR}/the_rust_part/target/release -lthe_rust_part
+#cgo CFLAGS: -I${SRCDIR}/the_rust_part/src
+
 #include <stdio.h>
 #include "the_rust_part/src/lib.h" // Include our header file
 int Cmain() {
@@ -28,6 +25,6 @@ import (
 )
 
 func CallRustViaC() {
-	Cmain()
+	C.Cmain()
 	fmt.Printf("CallRustViaC done.\n")
 }
